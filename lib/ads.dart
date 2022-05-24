@@ -85,4 +85,4 @@ class ads {
   }
 }
 
-//Initial commita
+//Initial commit
