@@ -23,25 +23,20 @@ class _gadsState extends State<gads> {
     super.initState();
     // Load ads.
     ads.bannerad();
+    ads.showRewardedAd();
+    ads.createRewardedAd();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("hello"),),
-      body: Column(
-        children: [
-          Container(
-            alignment: Alignment.center,
-            // width: ads.myBanner!.size.width.toDouble(),
-            // height:ads.myBanner!.size.height.toDouble(),
-            child: AdWidget(ad: ads.myBanner!,),
-          ),
-          ElevatedButton(onPressed: () {
+      body:  ElevatedButton(onPressed: () {
 
-          }, child: Text("ad"))
-        ],
-      ),
+        ads.createRewardedAd();
+        ads.showRewardedAd();
+
+      }, child: Text("ad"))
     );
 
   }
